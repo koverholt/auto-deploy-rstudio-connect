@@ -3,4 +3,4 @@ env:
     - APP_GUID=0fac9460-909e-4f14-9494-9ba27f052611
     - CONNECT_SERVER=https://apps.koverholt.com/
     - secure: TLluiZGyrMBhyPYLdZxT4cqWopGuarJXEKcDEYF2YM7E4sY9pMLi1+fKUOxYnQvwKgs3LgHab1hpNxsa1sb8z7gAKra5rLk2+Mfd0U1jAxVVWTn68neGQBmKYCMaScQLstZKIjNBf/Hrwrzd7YMhtnPnlyDsw6uIS99WzY5/XcSTlk7gVh+9wEGCnfYO1w90Jl4nXj2LMT0hPE8hiUkYCtKGmJzfuJ2tn+aFP9jjpI28Kq+xrmkulZVltEUmQMjlX64o2XDUF3aloey5CvQIlK/qQpBTW9el+Oz0oGub+ww2x55wTYoZSLr+iFeuo7G68AIDfHkUBcOMQTKSTAEtLGg2aVHE5o/Xb8IJgtCIssFfBn2kQ133wEwVC9M6gIJkj5/zPoC0MB32IPdhRgQ6eaSlE40zlxJC7U3lw8RqfXFXNBpg8zFn5R9jpviw56YZp86E0g62nmO4Y3/wuwizR4AySnHYgq3Wznic3ER7Xd+/5G7q4bXR2GfBDrYN6Kp2Qzu7K+ykb/lRURzvCRw6PdObQuSs3Cp8wCNqti6Keol+db08ztytE0hEggVmtR/E1PcSmpzUXHutjmjtFWnMMEXXo5xmRzSUQF+GWAffH3/1QnLBETMs4o+7Wu3Kt/GPhh11ZB+hw/N/NofIWmohPT4hTRr7ZhrR4HjTagVCpJ8=
-script: bash upload_and_deploy.sh ${APP_GUID} ./
+script: bash upload_and_deploy.sh ${APP_GUID} ./shiny-app/
