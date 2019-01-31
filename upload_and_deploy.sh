@@ -44,7 +44,7 @@ tar czf "${BUNDLE_PATH}" -C "${CONTENT_DIRECTORY}" .
 
  # Upload the bundle
 # TODO: Make this a v1 path
-UPLOAD=$(curl --silent --show-error -L --max-redirs 0 --fail -X POST \
+UPLOAD=$(curl --silent --show-error -k -L --max-redirs 0 --fail -X POST \
               -H "Authorization: Key ${CONNECT_API_KEY}" \
               --data-binary @"${BUNDLE_PATH}" \
               "${CONNECT_SERVER}__api__/v1/experimental/content/${APP}/upload")
@@ -52,7 +52,7 @@ BUNDLE=$(echo "$UPLOAD" | jq -r .bundle_id)
 echo "Created bundle: $BUNDLE"
  # Deploy the bundle.
 # TODO: Make this a v1 path
-DEPLOY=$(curl --silent --show-error -L --max-redirs 0 --fail -X POST \
+DEPLOY=$(curl --silent --show-error -k -L --max-redirs 0 --fail -X POST \
               -H "Authorization: Key ${CONNECT_API_KEY}" \
               --data '{"bundle":'"${BUNDLE}"'}' \
               "${CONNECT_SERVER}__api__/applications/${APP}/deploy")
@@ -66,7 +66,7 @@ CODE=-1
 START=0
 echo "Deployment task: ${TASK}"
 while [ "${FINISHED}" != "true" ] ; do
-    DATA=$(curl --silent --show-error -L --max-redirs 0 --fail \
+    DATA=$(curl --silent --show-error -k -L --max-redirs 0 --fail \
               -H "Authorization: Key ${CONNECT_API_KEY}" \
               "${CONNECT_SERVER}__api__/tasks/${TASK}?wait_time=1&first_status=$START")
     # Extract parts of the task status.
