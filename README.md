@@ -14,7 +14,7 @@ using the following command in the R console:
 rsconnect::writeManifest()
 ```
 
-### `.travis.yml
+### `.travis.yml` configuration file
 
 Configuration file used by Travis CI that contains environment variables when the CI job runs:
 
