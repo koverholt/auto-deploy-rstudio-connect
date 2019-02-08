@@ -26,4 +26,4 @@ And a script that runs the `upload_and_deploy.sh` deployment script
 
 ### `upload_and_deploy.sh` deployment script
 
-Script that deploys updates to the application when invoked from the CI job.
+Script that deploys updates of the application to RStudio Connect when invoked from the CI job.
