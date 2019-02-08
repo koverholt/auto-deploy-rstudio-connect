@@ -7,7 +7,7 @@ to an instance of RStudio Connect.
 
 ### `shiny-app/` project folder
 
-Contains a simple Shiny app and a `manifest.json` for the project that was generated
+Contains a Shiny app and a `manifest.json` for the project that was generated
 using the following command in the R console:
 
 ```
