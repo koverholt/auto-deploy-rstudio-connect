@@ -48,7 +48,7 @@ tar czf "${BUNDLE_PATH}" -C "${CONTENT_DIRECTORY}" .
 UPLOAD=$(curl --silent --show-error -k -L --max-redirs 0 --fail -X POST \
               -H "Authorization: Key ${CONNECT_API_KEY}" \
               --data-binary @"${BUNDLE_PATH}" \
-              "${CONNECT_SERVER}__api__/v1/experimental/content/${APP}/upload")
+              "${CONNECT_SERVER}/__api__/v1/experimental/content/${APP}/upload")
 BUNDLE=$(echo "$UPLOAD" | jq -r .bundle_id)
 echo "Created bundle: $BUNDLE"
 
@@ -56,7 +56,7 @@ echo "Created bundle: $BUNDLE"
 DEPLOY=$(curl --silent --show-error -k -L --max-redirs 0 --fail -X POST \
               -H "Authorization: Key ${CONNECT_API_KEY}" \
               --data '{"bundle":'"${BUNDLE}"'}' \
-              "${CONNECT_SERVER}__api__/v1/experimental/content/${APP}/deploy")
+              "${CONNECT_SERVER}/__api__/v1/experimental/content/${APP}/deploy")
 
 echo "$DEPLOY"
 TASK=$(echo "$DEPLOY" | jq -r .id)
@@ -69,7 +69,7 @@ echo "Deployment task: ${TASK}"
 while [ "${FINISHED}" != "true" ] ; do
     DATA=$(curl --silent --show-error -k -L --max-redirs 0 --fail \
               -H "Authorization: Key ${CONNECT_API_KEY}" \
-              "${CONNECT_SERVER}__api__/v1/experimental/tasks/${TASK}?wait_time=1&first_status=$START")
+              "${CONNECT_SERVER}/__api__/v1/experimental/tasks/${TASK}?wait_time=1&first_status=$START")
     # Extract parts of the task status
     FINISHED=$(echo "${DATA}" | jq .finished)
     CODE=$(echo "${DATA}" | jq .code)
