@@ -16,13 +16,6 @@ if [ -z "${CONNECT_SERVER}" ] ; then
   echo "    export CONNECT_SERVER='http://connect.company.com/'"
   exit 1
 fi
-if [[ "${CONNECT_SERVER}" != */ ]] ; then
-  echo "The CONNECT_SERVER environment variable must end in a trailing slash. It"
-  echo "defines the base URL of your RStudio Connect instance."
-  echo
-  echo "    export CONNECT_SERVER='http://connect.company.com/'"
-  exit 1
-fi
 if [ -z "${CONNECT_API_KEY}" ] ; then
   echo "The CONNECT_API_KEY environment variable is not defined. It must contain"
   echo "an API key owned by a 'publisher' account in your RStudio Connect instance."
