@@ -3,8 +3,6 @@
 # Create a bundle, upload that bundle to RStudio Connect, deploy that bundle,
 # then wait for deployment to complete.
 #
-# Run this script from the content root directory.
-#
 
 set -e
 set -x
