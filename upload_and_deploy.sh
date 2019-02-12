@@ -40,7 +40,7 @@ UPLOAD=$(curl --silent --show-error -k -L --max-redirs 0 --fail -X POST \
               -H "Authorization: Key ${CONNECT_API_KEY}" \
               --data-binary @"${BUNDLE_PATH}" \
               "${CONNECT_SERVER}/__api__/v1/experimental/content/${APP}/upload")
-BUNDLE=$(echo "$UPLOAD" | jq -r .bundle_id)
+BUNDLE=$(echo ${UPLOAD} | jq -r .bundle_id)
 echo "Created bundle: $BUNDLE"
 
 # Deploy the bundle
@@ -49,8 +49,8 @@ DEPLOY=$(curl --silent --show-error -k -L --max-redirs 0 --fail -X POST \
               --data '{"bundle":'"${BUNDLE}"'}' \
               "${CONNECT_SERVER}/__api__/v1/experimental/content/${APP}/deploy")
 
-echo "$DEPLOY"
-TASK=$(echo "$DEPLOY" | jq -r .id)
+echo ${DEPLOY}
+TASK=$(echo ${DEPLOY} | jq -r .task_id)
 
 # Poll until task has completed
 FINISHED=false
