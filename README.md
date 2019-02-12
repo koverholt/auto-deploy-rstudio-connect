@@ -7,12 +7,13 @@ to an instance of RStudio Connect.
 
 1. Fork this repository
 2. Deploy the Shiny app to RStudio Connect
-3. Activate Travis CI for the Git repository
+3. Input the address of the RStudio Connect server as an environment variable in `.travis.yml`
 4. Input the GUID for the Shiny app as an environment variable in `.travis.yml`
 5. Input your RStudio Connect API key as an encrypted environment variable in `.travis.yml`
-6. Make a change to the Shiny app and commit the change to Git
-7. The CI job will deploy the updated version of the Shiny app to RStudio Connect
-8. Repeat Step 6 to customize the app as much as you'd like, and enjoy automated re-deployments!
+6. Activate Travis CI for the Git repository
+7. Make a change to the Shiny app and commit the change to Git
+8. The CI job will deploy the updated version of the Shiny app to RStudio Connect
+9. Repeat Step 7 to customize the app as much as you'd like, and enjoy automated re-deployments of your Shiny app!
 
 ## Contents
 
