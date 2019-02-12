@@ -64,7 +64,7 @@ while [ "${FINISHED}" != "true" ] ; do
     # Extract parts of the task status
     FINISHED=$(echo "${DATA}" | jq .finished)
     CODE=$(echo "${DATA}" | jq .code)
-    START=$(echo "${DATA}" | jq .last_status)
+    START=$(echo "${DATA}" | jq .last)
     # Present the latest status lines
     echo "${DATA}" | jq  -r '.status | .[]'
 done
