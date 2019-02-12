@@ -12,6 +12,7 @@ to an instance of RStudio Connect.
 5. Input your RStudio Connect API key as an encrypted environment variable in `.travis.yml`
 6. Make a change to the Shiny app and commit the change to Git
 7. The CI job will deploy the updated version of the Shiny app to RStudio Connect
+8. Repeat Step 6 to customize the app as much as you'd like, and enjoy automated re-deployments!
 
 ## Contents
 
