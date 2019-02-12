@@ -51,6 +51,7 @@ DEPLOY=$(curl --silent --show-error -k -L --max-redirs 0 --fail -X POST \
 
 echo "$DEPLOY"
 TASK=$(echo "$DEPLOY" | jq -r .id)
+echo $TASK
 
 # Poll until task has completed
 FINISHED=false
