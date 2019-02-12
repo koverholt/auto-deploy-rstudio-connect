@@ -1,7 +1,7 @@
 library(shiny)
 
 ui <- pageWithSidebar(
-  headerPanel('K-Means Clustering on Iris Dataset'),
+  headerPanel('K-Means Clustering - Iris Dataset'),
   sidebarPanel(
     selectInput('xcol', 'X Variable', names(iris)),
     selectInput('ycol', 'Y Variable', names(iris),
@@ -32,7 +32,7 @@ server <- function(input, output, session) {
     par(mar = c(5.1, 4.1, 0, 1))
     plot(selectedData(),
          col = clusters()$cluster,
-         pch = 10, cex = 2)
+         pch = 18, cex = 3)
     points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
   })
 
