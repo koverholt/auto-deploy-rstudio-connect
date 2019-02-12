@@ -55,7 +55,7 @@ echo "Created bundle: $BUNDLE"
 DEPLOY=$(curl --silent --show-error -k -L --max-redirs 0 --fail -X POST \
               -H "Authorization: Key ${CONNECT_API_KEY}" \
               --data '{"bundle":'"${BUNDLE}"'}' \
-              "${CONNECT_SERVER}__api__/applications/${APP}/deploy")
+              "${CONNECT_SERVER}__api__/v1/experimental/content/${APP}/deploy")
 
 echo "$DEPLOY"
 TASK=$(echo "$DEPLOY" | jq -r .id)
