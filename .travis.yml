@@ -1,7 +1,0 @@
-env:
-  global:
-    - CONNECT_SERVER=https://colorado.rstudio.com/rsc/
-    - APP_GUID=1d26ca21-c9d0-4016-b0ea-98a8a2107af0
-    - secure: GgmiHStlxsoXC2gbNfvFvfR8XP9X7Hjzso0NzkSWOJiRAsjbwgwBzHTWrPO1jI5px08gPCcbIGg8dyZ4iES8n/rHXajQDsWhc0kfYFd0toKcdiC5uO99qCjMb4M9zdNqSXgSWEn3VIQF9U42xvyrDU9qdTxyvDryM/W/UenQOPw4XHKH/Z3bw0G9l+8TnhyaqDEzX8r637BoOjbltDyfoaDRP8blTYHQB2s4YVIjlKWsbBX9SG+gBpsavYMz0YHVTeVOqvFLIU9j0uZ4KdaYHSZ6Rpijfoo9ceBIYr4DOFHsKV1c3Tj9xqXZaolUAYj1KQPLybd5LQ2Tb/PlKopQIIxzqV3sy6K4PfBEsHo0c9UACKRsCfnQvZWJjzMOAZnFgqbY3PQq+PYomfhYsKKjbSCpkljv0vtugbz6vDIUkOeBkUv7BEB0jvxMo1cKd2gH/Ynsuqr9OJv7i+a9R/sFBH+RUpOoqAXCXeC/fw8EGDNXcZwgMudeQUyjYEA+b0je9/eGhzhFLvQyz+ifRkbuyFHOxiWd60Fujy/qPGZy0eyh7By3U0N7SPYLcT4BDOlDfIwvDuQ1x5dReNvk/oKls0Bti3w2fC2JL1ce83GybfyvhIA1qJtJtambOo2FtQxCia/OY6rvEPleEtiOfdIdWQRjRs4tRmpwr8aRycPe2Mw=
-
-script: bash upload_and_deploy.sh ${APP_GUID} ./shiny-app/
