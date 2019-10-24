@@ -1,7 +1,7 @@
 library(shiny)
 
 ui <- pageWithSidebar(
-  headerPanel('K-Means Clustering - Iris Dataset - TEST'),
+  headerPanel('K-Means Clustering - Iris Dataset'),
   sidebarPanel(
     selectInput('xcol', 'X Variable', names(iris)),
     selectInput('ycol', 'Y Variable', names(iris),
